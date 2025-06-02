@@ -21,7 +21,7 @@ class Settings(BaseSettings):
         extra="ignore",
     )
     APP_API_V1_STR: str = "/api/v1"
-    APP_PROJECT_NAME: str = "shee-sql"
+    APP_PROJECT_NAME: str = "sheet-sql"
     APP_DEBUG: bool = True
     APP_ENVIRONMENT: Literal["local", "staging", "production"] = "local"
     APP_BACKEND_CORS_ORIGINS: Annotated[
@@ -38,3 +38,5 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+
+print(settings.model_dump())
